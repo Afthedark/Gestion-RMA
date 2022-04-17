@@ -1,2 +1,0 @@
-# Gestions-RMA
-Trabajo Grupal
