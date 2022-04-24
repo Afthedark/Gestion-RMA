@@ -55,6 +55,15 @@ session_start();
   <meta charset="utf-8">
   <title>login sistema de RMA</title>
 
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
 </head>
 <body>
 
@@ -62,27 +71,26 @@ session_start();
 <div id="wrap">
   <div id="regbar">
 
-    <div id="navthing" align="center" style="margin-left: 30%; margin-right: 30%; margin-top: 10%; border: 3px solid black;">
+    <div id="navthing" align="center" style="margin-left: 37%; margin-right: 37%; margin-top: 10%; border: 3px solid MediumPurple;">
       <div class="card-header text-center">
       <center><img src="logo/logo ONECOMPANY color.png" width="300" height="150">
-<h5>Ingrese sus Datos para Iniciar Sesion</h5>  
+<h5>Ingresa tus datos para Iniciar Sesion </h5>  
       </center>
       
     </div>
        <section id="container">
          <form action="" method="post">
-          <input type="text" name="usuario" placeholder="Usuario" required> *
+          <input type="text" name="usuario" placeholder="Ingrese Numero Carnet" required> * <i class="bi bi-file-person-fill"></i>
           <br>
           <br> 
-          <input type="password" name="clave" placeholder="Clave" required> *
+          <input type="password" name="clave" placeholder="Ingrese Contraseña" required> * <i class="bi bi-lock-fill"></i>
           <br>
            <?php 
             echo '<span style="color:red">'.$alert.'</span>';
            ?>  
            <br>
            
-          <button type="submit" >Ingresar</button>
-          
+          <button type="submit" class="btn btn-primary">Ingresar</button>
           <br>
           <br>
            
@@ -95,5 +103,11 @@ session_start();
     </div>
   </div>
 </div>
+
+<br>
+
+
+
 </body>
 </html>
+
