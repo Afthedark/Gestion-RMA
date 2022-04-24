@@ -12,9 +12,17 @@
 <script src="boostrap/js/bootstrap.min.js"></script>
 <!-- fin boostrap --> 
 
+<style type="text/css">
+    .msj{
+        color: red;
+    }
+    .msj2{
+        color: green;
+    }
+</style>
 </head>
 <body>
-<h3><i class='fas fa-list' style='margin-right:10px;'></i>REGISTRAR USUARIO</h3><BR><BR>
+<h3><i class="fa-solid fa-user"></i> REGISTRAR USUARIO</h3><BR><BR>
 <form class="form-horizontal" action="pr_regusuario.php" method="GET">
     <div class="form-group">
         <label class="control-label col-xs-3">Nombre:</label>
@@ -88,16 +96,28 @@
     <div class="form-group">
         <label class="control-label col-xs-3" >Contrasena:</label>
         <div class="col-xs-5">
-            <input type="tel" class="form-control" name="txtclv1" placeholder="Contrasena" required>
+            <input type="password" class="form-control" name="txtclv1" placeholder="Contrasena" required>
         </div>
     </div>  
     <div class="form-group">
         <label class="control-label col-xs-3" >Repita Contrasena:</label>
         <div class="col-xs-5">
-            <input type="tel" class="form-control" name="txtclv2" placeholder="Contrasena" required>
+            <input type="password" class="form-control" name="txtclv2" placeholder="Contrasena" required>
         </div>
     </div> 
     <br>
+    <center>
+<?php 
+if(isset($_GET['msj'])){
+   $mensaje=$_GET['msj'];
+    echo '<b class=msj>'.$mensaje.'</b>';
+}
+if(isset($_GET['msj2'])){
+   $mensaje=$_GET['msj2'];
+    echo '<b class=msj2>'.$mensaje.'</b>';
+}
+ ?>
+</center>
     <div class="form-group">
         <div class="col-xs-offset-3 col-xs-9">
             <input type="submit" class="btn btn-primary" value="Enviar">
@@ -106,13 +126,6 @@
     </div>
 
 </form>
-<center>
-<?php 
-if(isset($_GET['msj'])){
-   $mensaje=$_GET['msj'];
-	echo $mensaje;
-}
- ?>
-</center>
+
 </body>
 </html>

@@ -28,13 +28,15 @@ $ejec=mysqli_query($conection,$registro);
  
 	 if($ejec){
 		echo "Usuario registrado:<b>".$ci."</b>";
+         $mensaje="Usuario Registrado";
+        header("location:registro_de_usuarios.php?msj2=$mensaje");
 	 };
 }
 
 else{
  echo "La contrasenas no coinciden...";
  $mensaje="La contraseñas no coinciden...";
- header("location:regitro_de_usuario.php?msj=$mensaje");
+ header("location:registro_de_usuarios.php?msj=$mensaje");
  }?>
 
 

@@ -25,7 +25,14 @@ include "include/menu_principal.php";
 <!-- Versión compilada y comprimida del JavaScript de Bootstrap -->
 <script src="boostrap/js/bootstrap.min.js"></script>
 <!-- fin boostrap --> 
-
+<style type="text/css">
+    .msj{
+        color: red;
+    }
+    .msj2{
+        color: green;
+    }
+</style>
 </head>
 <body>
 <h3><i style='margin-right:10px;'></i>REGISTRAR USUARIO</h3><BR><BR>
@@ -112,6 +119,18 @@ include "include/menu_principal.php";
         </div>
     </div> 
     <br>
+    <center>
+<?php 
+if(isset($_GET['msj'])){
+   $mensaje=$_GET['msj'];
+    echo '<b class=msj>'.$mensaje.'</b>';
+}
+if(isset($_GET['msj2'])){
+   $mensaje=$_GET['msj2'];
+    echo '<b class=msj2>'.$mensaje.'</b>';
+}
+ ?>
+</center>
     <div class="form-group">
         <div class="col-xs-offset-3 col-xs-9">
             <input type="submit" class="btn btn-primary" value="Enviar">
@@ -120,14 +139,7 @@ include "include/menu_principal.php";
     </div>
 
 </form>
-<center>
-<?php 
-if(isset($_GET['msj'])){
-   $mensaje=$_GET['msj'];
-  echo $mensaje;
-}
- ?>
-</center>
+
 </body>
 </html>
 </div>
