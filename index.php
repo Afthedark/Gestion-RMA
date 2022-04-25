@@ -80,10 +80,12 @@ session_start();
     </div>
        <section id="container">
          <form action="" method="post">
-          <input type="text" name="usuario" placeholder="Ingrese Numero Carnet" required> * <i class="bi bi-file-person-fill"></i>
+          <input type="number" name="usuario" placeholder="Ingrese Numero Carnet" required> <i class="bi bi-file-person-fill"></i> <B><FONT COLOR="red">*</FONT>
+          
           <br>
           <br> 
-          <input type="password" name="clave" placeholder="Ingrese Contraseña" required> * <i class="bi bi-lock-fill"></i>
+          <input type="password" name="clave" placeholder="Ingrese Contraseña" required> <i class="bi bi-lock-fill"></i> <B><FONT COLOR="red">*</FONT>
+          
           <br>
            <?php 
             echo '<span style="color:red">'.$alert.'</span>';
