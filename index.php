@@ -72,7 +72,7 @@ session_start();
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-    <center><img src="logo/logo ONECOMPANY color.png" width="250" height="150">
+    <center><img src="logo/logo ONECOMPANY color.png" width="200" height="100">
       <p class="login-box-msg">Ingresa tus datos para Iniciar Sesion</p>
 
       <form action="" method="post">
