@@ -1,6 +1,6 @@
 <?php 
-	
-	$host = 'localhost';
+	//conexiones
+	$host = 'localhost:33061';
 	$user = 'root';
 	$password = '';
 	$db = 'dbrma';

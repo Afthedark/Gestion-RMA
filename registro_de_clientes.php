@@ -1,13 +1,14 @@
 <?php 
 session_start();
-session_destroy();
-header('location: CerrarSesion.html');
-?>
-<?php 
+if($_SESSION['rol']!=3 )
+{
+  header('location: ./');
+}
 include "include/head.php";
 include "include/menu_superior.php";
 include "include/menu_principal.php";
 ?>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     
@@ -16,4 +17,3 @@ include "include/menu_principal.php";
   <?php
   include "include/footer.php"
   ?>
-
