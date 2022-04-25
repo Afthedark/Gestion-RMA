@@ -29,7 +29,7 @@ include "./conexion.php";
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="home.php" class="nav-link active">
+            <a href="inicio.php" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Inicio
