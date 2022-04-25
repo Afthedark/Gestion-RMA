@@ -9,15 +9,10 @@ $dir=$_GET['txtdir'];
 $tel=$_GET['txttel'];
 $email=$_GET['txtemail'];
 
-//$codusr=split(" ",$nombre);
-//$codigo=substr($codusr[1],0,1).$codusr[0].rand(100,999);
-
 $tipo=$_GET['rbtusu'];
-//$nomb=strtoupper($_GET['txtname']);
+ 
 $clv1=$_GET['txtclv1'];
 $clv2=$_GET['txtclv2']; 
-
-//echo $nombre.$apellido.$ci.$ext.$dir.$tel.$email.$tipo.$clv1.$clv2;
 
 if($clv1==$clv2)
  {
@@ -27,15 +22,23 @@ $registro=("INSERT INTO usuario (id_usuario, nombre, apellidos, ci, direccion, t
 $ejec=mysqli_query($conection,$registro);
  
 	 if($ejec){
-		echo "Usuario registrado:<b>".$ci."</b>";
-         $mensaje="Usuario Registrado";
+         if($tipo==2){
+            $rol="Técnico";
+         }
+         if($tipo==3){
+            $rol="Vendedor";
+         }
+         if($tipo==4){
+            $rol="Cliente";
+         }
+         $mensaje="Se creó la cuenta de usuario tipo $rol";
         header("location:registro_de_usuarios.php?msj2=$mensaje");
 	 };
 }
 
 else{
- echo "La contrasenas no coinciden...";
- $mensaje="La contraseñas no coinciden...";
+ echo "La contraseñas no coinciden...";
+ $mensaje="Ambas contraseñas deben ser iguales";
  header("location:registro_de_usuarios.php?msj=$mensaje");
  }?>
 
