@@ -77,22 +77,22 @@ session_start();
 
       <form action="" method="post">
         <div class="input-group mb-3">
-          <input type="text" name="usuario" class="form-control" placeholder="CI" required>
+          <input type="text" name="usuario" class="form-control" placeholder="Ingrese CI" required autocomplete="off">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-id-card"></span>
-              <B><FONT COLOR="red">*</FONT>
             </div>
           </div>
+          <span class="text-danger">*</span>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="clave" class="form-control" placeholder="Contraseña" required>
+          <input type="password" name="clave" class="form-control" placeholder="Ingrese Contraseña" required autocomplete="off">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
-              <B><FONT COLOR="red">*</FONT>
             </div>
           </div>
+          <span class="text-danger">*</span>
         </div>
         <div class="row">
           <div class="col-8">
@@ -104,6 +104,11 @@ session_start();
           </div>
           <!-- /.col -->
         </div>
+        <br>
+        <center>  <?php 
+            echo '<span style="color:red">'.$alert.'</span>';
+           ?> </center>
+        <br>
       </form>
 
     </div>
