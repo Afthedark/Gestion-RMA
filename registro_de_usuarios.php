@@ -2,7 +2,7 @@
 session_start();
 if($_SESSION['rol']!=1 )
 {
-  header('location: ./');
+  header('location: inicio.php');
 }
 include "include/head.php";
 include "include/menu_superior.php";
