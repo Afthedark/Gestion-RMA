@@ -49,67 +49,74 @@ session_start();
   }
 ?>
 
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>login sistema de RMA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Log in</title>
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
-<body>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <!-- /.login-logo -->
+  <div class="card">
+    <div class="card-body login-card-body">
+    <center><img src="logo/logo ONECOMPANY color.png" width="250" height="150">
+      <p class="login-box-msg">Ingresa tus datos para Iniciar Sesion</p>
 
-  
-<div id="wrap">
-  <div id="regbar">
+      <form action="" method="post">
+        <div class="input-group mb-3">
+          <input type="text" name="usuario" class="form-control" placeholder="CI" required>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-id-card"></span>
+              <B><FONT COLOR="red">*</FONT>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" name="clave" class="form-control" placeholder="Contraseña" required>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+              <B><FONT COLOR="red">*</FONT>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+         
+          </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
 
-    <div id="navthing" align="center" style="margin-left: 37%; margin-right: 37%; margin-top: 10%; border: 3px solid MediumPurple;">
-      <div class="card-header text-center">
-      <center><img src="logo/logo ONECOMPANY color.png" width="300" height="150">
-<h5>Ingresa tus datos para Iniciar Sesion </h5>  
-      </center>
-      
     </div>
-       <section id="container">
-         <form action="" method="post">
-          <input type="number" name="usuario" placeholder="Ingrese Numero Carnet" required> <i class="bi bi-file-person-fill"></i> <B><FONT COLOR="red">*</FONT>
-          
-          <br>
-          <br> 
-          <input type="password" name="clave" placeholder="Ingrese Contraseña" required> <i class="bi bi-lock-fill"></i> <B><FONT COLOR="red">*</FONT>
-          
-          <br>
-           <?php 
-            echo '<span style="color:red">'.$alert.'</span>';
-           ?>  
-           <br>
-           
-          <button type="submit" class="btn btn-primary">Ingresar</button>
-          <br>
-          <br>
-           
-        </form>
-      </section> 
-    </div>
-    <div>
-      
-       
-    </div>
+    <!-- /.login-card-body -->
   </div>
 </div>
+<!-- /.login-box -->
 
-<br>
-
-
-
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>
-
