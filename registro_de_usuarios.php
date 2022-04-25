@@ -2,7 +2,7 @@
    session_start();
    if($_SESSION['rol']!=1 )
    {
-     header('location: inicio.php');
+     header('location: ./');
    }
    include "include/head.php";
    include "include/menu_superior.php";
@@ -26,45 +26,30 @@
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form action="pr_regusuario.php" method="GET">
-                            <div class="card-body">
-                                <div class="form-group">
+                            <div class="card-body " >
+                                <div class="form-group input-group-append">
                                 <input type="text" class="form-control" name="txtname" placeholder="Nombre" required autocomplete="off">
-                                
+                                 <span class="text-danger">  *</span>
                                 </div>
                                 
-                                <div class="form-group">
-                                <input type="text" class="form-control" name="txtape" placeholder="Apellido" required autocomplete="off"> 
+                                <div class="form-group input-group-append">
+                                <input type="text" class="form-control" name="txtape" placeholder="Apellido" required autocomplete="off"><span class="text-danger">  *</span> 
                                 </div>
-                                <div class="form-group">
-                                <div class="row">
-                                        <div class="col-6">
-                                            <input class="form-control" type="text" name="txtci" placeholder="C.I." required autocomplete="off">
-                                        </div>
-                                        <div class="col-6">
-                                            <select class="form-control" name="cboext"  >  
-                                                <option value="OR">ORURO</option>
-                                                <option value="LP">LAPAZ</option>
-                                                <option value="CB">COCHABAMBA</option>
-                                                <option value="SC">SANTA CRUZ</option>
-                                                <option value="PA">PANDO</option>
-                                                <option value="TJ">TARIJA</option>
-                                                <option value="PO">POTOSI</option>
-                                                <option value="CH">CHUQUISACA</option>
-                                                <option value="BE">BENI</option>
-                                            </select> 
-                                        </div>
+
+                                <div class="form-group input-group-append">
+                                <input class="form-control" type="text" name="txtci" placeholder="C.I." required autocomplete="off"><span class="text-danger">  *</span> 
                                 </div>
+                               
+                                <div class="form-group input-group-append">
+                                    <input type="text" class="form-control" name="txtdir" placeholder="Dirección" required autocomplete="off"><span class="text-danger">  *</span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="txtdir" placeholder="Dirección" required autocomplete="off">
+                                <div class="form-group input-group-append">
+                                    <input type="number" class="form-control" name="txttel" placeholder="Teléfono" required autocomplete="off"><span class="text-danger">  *</span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="number" class="form-control" name="txttel" placeholder="Teléfono" required autocomplete="off">
+                                <div class="form-group input-group-append">
+                                    <input type="text" class="form-control" name="txtemail" placeholder="Email" required autocomplete="off"><span class="text-danger">  *</span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="txtemail" placeholder="Email" required autocomplete="off">
-                                </div>
-                                <div class="form-group">
+                                <div class="form-group ">
                                 <label>Tipo de Usuario:</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="rbtusu" value="2" checked>
@@ -79,11 +64,11 @@
                                     <label class="form-check-label">Cliente</label>
                                 </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" name="txtclv1" placeholder="Contraseña" required autocomplete="off">
+                                <div class="form-group input-group-append">
+                                    <input type="password" class="form-control" name="txtclv1" placeholder="Contraseña" required autocomplete="off"><span class="text-danger">  *</span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" name="txtclv2" placeholder="Repita la Contraseña" required autocomplete="off">   
+                                <div class="form-group input-group-append">
+                                    <input type="password" class="form-control" name="txtclv2" placeholder="Repita la Contraseña" required autocomplete="off"> <span class="text-danger">  *</span>  
                                 </div>
                             </div>
                             <!-- /.card-body -->

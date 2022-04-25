@@ -4,7 +4,7 @@ session_start();
 $nombre=$_GET['txtname'];
 $apellido=$_GET['txtape'];
 $ci=$_GET['txtci'];
-$ext=$_GET['cboext'];
+ 
 $dir=$_GET['txtdir'];
 $tel=$_GET['txttel'];
 $email=$_GET['txtemail'];
@@ -17,7 +17,7 @@ $clv2=$_GET['txtclv2'];
 if($clv1==$clv2)
  {
  	$clv=md5($clv1);
-$registro=("INSERT INTO usuario (id_usuario, nombre, apellidos, ci, direccion, telefono, email, clave, activo, id_rol) VALUES (NULL, '$nombre', '$apellido', '$ci.$ext', '$dir', '$tel', '$email', '$clv', '1', '$tipo')");
+$registro=("INSERT INTO usuario (id_usuario, nombre, apellidos, ci, direccion, telefono, email, clave, activo, id_rol) VALUES (NULL, '$nombre', '$apellido', '$ci', '$dir', '$tel', '$email', '$clv', '1', '$tipo')");
 
 $ejec=mysqli_query($conection,$registro);
  
