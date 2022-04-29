@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-04-2022 a las 20:23:25
+-- Tiempo de generación: 30-04-2022 a las 01:22:53
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -44,7 +44,8 @@ CREATE TABLE `rma` (
   `facha_solicitud` datetime DEFAULT NULL,
   `informe_tecnico` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `id_estado_rma` int(11) DEFAULT NULL,
-  `id_solucion_rma` int(11) DEFAULT NULL
+  `id_solucion_rma` int(11) DEFAULT NULL,
+  `id_venta` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
@@ -107,7 +108,8 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellidos`, `ci`, `direccion`, `
 (2, 'ramiro', 'mendoza', '1234567', 'av america', 72347557, 'ramiromendoza@gmail.com', '75f33e6eebce7012b8c74a889fa8a7ed', '1', 2),
 (3, 'alain', 'rojas', '7654321', 'av blaco galindo', 74336816, 'alainrojas@gmail.com', '0407e8c8285ab85509ac2884025dcf42', '1', 3),
 (4, 'sandro', 'massi', '12345678', 'calle padilla', 76562214, 'sandromassi@gmail.com', '4983a0ab83ed86e0e7213c8783940193', '1', 4),
-(5, 'khkh', 'kjbk', '31456132.OR', 'hfckhb', 54654132, 'jose@gmail.com', '202cb962ac59075b964b07152d234b70', '1', 2);
+(9, 'jhon', 'perez', '444444', 'av petrolera', 4651321, 'jhon@gmail.com', 'ce5d3fc772b9e4b776530896350966c0', '1', 3),
+(10, 'jhkj', 'dhasd', '4132165', 'av petrolera', 4654513, 'jh@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '1', 3);
 
 -- --------------------------------------------------------
 
@@ -122,7 +124,6 @@ CREATE TABLE `venta` (
   `fecha garantia` datetime DEFAULT NULL,
   `codigo_producto` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `estado` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `id_rma` int(11) DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -142,7 +143,8 @@ ALTER TABLE `estado_rma`
 ALTER TABLE `rma`
   ADD PRIMARY KEY (`id_rma`),
   ADD KEY `id_estado_rma` (`id_estado_rma`),
-  ADD KEY `id_solucion_rma` (`id_solucion_rma`);
+  ADD KEY `id_solucion_rma` (`id_solucion_rma`),
+  ADD KEY `id_venta` (`id_venta`);
 
 --
 -- Indices de la tabla `rol`
@@ -168,7 +170,6 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `venta`
   ADD PRIMARY KEY (`id_venta`),
-  ADD KEY `id_rma` (`id_rma`),
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
@@ -203,7 +204,7 @@ ALTER TABLE `solucion_rma`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`
@@ -220,7 +221,8 @@ ALTER TABLE `venta`
 --
 ALTER TABLE `rma`
   ADD CONSTRAINT `rma_ibfk_1` FOREIGN KEY (`id_estado_rma`) REFERENCES `estado_rma` (`id_estado`),
-  ADD CONSTRAINT `rma_ibfk_2` FOREIGN KEY (`id_solucion_rma`) REFERENCES `solucion_rma` (`id_solucion_rma`);
+  ADD CONSTRAINT `rma_ibfk_2` FOREIGN KEY (`id_solucion_rma`) REFERENCES `solucion_rma` (`id_solucion_rma`),
+  ADD CONSTRAINT `rma_ibfk_3` FOREIGN KEY (`id_venta`) REFERENCES `venta` (`id_venta`);
 
 --
 -- Filtros para la tabla `usuario`
@@ -232,7 +234,6 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `venta`
 --
 ALTER TABLE `venta`
-  ADD CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`id_rma`) REFERENCES `rma` (`id_rma`),
   ADD CONSTRAINT `venta_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
 COMMIT;
 
