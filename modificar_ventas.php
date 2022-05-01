@@ -1,22 +1,21 @@
 <?php 
     session_start();
-    if($_SESSION['rol']!=1 && $_SESSION['rol']!=3 )
-    {
+    if($_SESSION['rol']!=1 && $_SESSION['rol']!=3 ){
         header('location: inicio.php');
     }
     include "include/head.php";
     include "include/menu_superior.php";
     include "include/menu_principal.php";
 ?>
-<div class="content-wrapper">  
-    <br>
-    <section class="content">    
+<div class="content-wrapper">
+   <br>
+   <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
                         <div class="card-body register-card-body">
-                            <h3 class="login-box-msg">Formulario de Registro de Ventas</h3>
+                            <h3 class="login-box-msg">Formulario de Modificación de Ventas</h3>
                             <form action="pr_regusuario.php" method="GET">
                                 <div class="card-body " >
                                     <div class="form-group input-group-append">
@@ -37,12 +36,12 @@
                                             echo '<b class=msj>'.$mensaje.'</b>';
                                         }
                                         if(isset($_GET['msj2'])){
-                                        $mensaje=$_GET['msj2'];
+                                            $mensaje=$_GET['msj2'];
                                             echo '<b class=msj2>'.$mensaje.'</b>';
                                         }
                                     ?>
-                                    <br>
-                                    <button type="submit" class="btn btn-primary btn-lg">Registrar</button>
+                                <br>
+                                <button type="submit" class="btn btn-primary btn-lg">Modificar</button>
                                 </center>
                             </form>
                         </div>
@@ -53,14 +52,13 @@
     </section>
     <style type="text/css">
         .msj{
-            color: red;
+        color: red;
         }
         .msj2{
-            color: green;
+        color: green;
         }
-    </style>   
+    </style>
 </div>
 <?php
     include "include/footer.php"
 ?>
-

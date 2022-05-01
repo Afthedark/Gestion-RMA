@@ -72,14 +72,29 @@ include "./conexion.php";
             if($_SESSION['rol']==1 || $_SESSION['rol']==3)
             {
             ?>
-             <li class="nav-item">
-            <a href="registro_de_ventas.php" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Registro de ventas
-              </p>
-            </a>
-          </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Módulo de ventas
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="registro_de_ventas.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Registrar Venta</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="ventas_registradas.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Ventas Registradas</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
           <?php 
           } 
           ?>
