@@ -58,18 +58,13 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gestion-RMA</title>
 
-  <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
     <center><img src="logo/logo ONECOMPANY color.png" width="200" height="100">
@@ -98,11 +93,9 @@ session_start();
           <div class="col-8">
          
           </div>
-          <!-- /.col -->
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
           </div>
-          <!-- /.col -->
         </div>
         <br>
         <center>  <?php 
@@ -112,16 +105,11 @@ session_start();
       </form>
 
     </div>
-    <!-- /.login-card-body -->
   </div>
 </div>
-<!-- /.login-box -->
 
-<!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>
