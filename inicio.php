@@ -1,5 +1,7 @@
 <?php
-  session_start();
+if(!isset($_SESSION)){
+ session_start();
+}
   if($_SESSION['rol']!=1 && $_SESSION['rol']!=2  && $_SESSION['rol']!=3 && $_SESSION['rol']!=4){
     header('location: ./');
   }  
