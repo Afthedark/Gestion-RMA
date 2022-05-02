@@ -11,10 +11,11 @@ if($result[0] == 1){
 		header("location: ventas_registradas.php");
 	}
 	else{
-		echo "Error al eliminar";
+		header("location: ventas_registradas.php");
 	}
 }
 else{
 	header("location: ventas_registradas.php");
 }
+/*..*/
 ?>
