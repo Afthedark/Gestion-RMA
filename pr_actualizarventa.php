@@ -14,7 +14,7 @@ $registro=("UPDATE venta SET num_serie= '$numserie', fecha_garantia= '$fechag', 
 	$ejec=mysqli_query($conection,$registro);
 	 
  if ($ejec) {
- 	header("location:inicio.php");
+ 	header("location:ventas_registradas.php");
  }
 
 
