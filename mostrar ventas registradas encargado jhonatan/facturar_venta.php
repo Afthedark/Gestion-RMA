@@ -1,4 +1,5 @@
 <?php   
+//Funcion Para facturar ventas
 include "conexion.php";
 
 $id_venta= $_REQUEST['id'];
