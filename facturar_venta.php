@@ -1,6 +1,6 @@
 <?php
 session_start();
-//Facturar Ventas
+//Facturar Ventas Codigo
 include "conexion.php";
 
 $id_venta = $_REQUEST["id"];
