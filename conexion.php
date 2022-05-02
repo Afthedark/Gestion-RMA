@@ -1,6 +1,6 @@
 <?php 
 	//conexiones
-	$host = 'localhost';
+	$host = 'localhost:33061';
 	$user = 'root';
 	$password = '';
 	$db = 'dbrma';
@@ -13,7 +13,7 @@
 	else
 	{
 
-		
+
 	}
 
 ?>	
