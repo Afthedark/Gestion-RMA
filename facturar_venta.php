@@ -1,5 +1,6 @@
 <?php   
 session_start();
+
 include "conexion.php";
 
 $id_venta= $_REQUEST['id'];
