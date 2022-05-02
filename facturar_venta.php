@@ -17,7 +17,7 @@ if ($result[0] == 1) {
     if ($query_delete) {
         header("location: ventas_registradas.php");
     } else {
-        echo "Error al Facturar";
+        header("location: ventas_registradas.php");
     }
 } else {
     header("location: ventas_registradas.php");
