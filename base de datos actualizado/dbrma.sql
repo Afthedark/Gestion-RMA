@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-04-2022 a las 01:22:53
+-- Tiempo de generación: 02-05-2022 a las 02:28:08
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -120,12 +120,29 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellidos`, `ci`, `direccion`, `
 CREATE TABLE `venta` (
   `id_venta` int(11) NOT NULL,
   `num_serie` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `fecha_venta` datetime DEFAULT NULL,
-  `fecha garantia` datetime DEFAULT NULL,
+  `fecha_venta` date DEFAULT NULL,
+  `fecha_garantia` date DEFAULT NULL,
   `codigo_producto` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `estado` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `estado` char(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`id_venta`, `num_serie`, `fecha_venta`, `fecha_garantia`, `codigo_producto`, `estado`, `id_usuario`) VALUES
+(1, '1111', '2022-04-29', '2022-04-30', '2222', '2', 1),
+(2, '2222', '2022-04-29', '2022-04-30', '3333', '0', 2),
+(3, '3333', '2022-04-30', '2022-04-30', '3333', '2', 1),
+(4, '4444', '2022-04-30', '2022-04-30', '4444', '2', 1),
+(5, '5555', '2022-04-30', '2022-04-30', '5555', '2', 1),
+(6, '6666', '2022-04-30', '2022-04-30', '6666', '1', 2),
+(7, '7777', '2022-04-30', '2022-04-30', '7777', '1', 3),
+(8, '8888', '2022-04-30', '2022-04-30', '8888', '1', 1),
+(9, '9999', '2022-04-30', '2022-04-30', '9999', '1', 2),
+(10, '1010', '2022-04-30', '2022-04-30', '1010', '1', 4),
+(11, '1212', '2022-04-30', '2022-04-30', '1212', '1', 4);
 
 --
 -- Índices para tablas volcadas
@@ -210,7 +227,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
