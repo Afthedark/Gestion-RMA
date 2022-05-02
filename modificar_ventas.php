@@ -1,7 +1,6 @@
 <?php 
 session_start();
-if($_SESSION['rol']!=1 && $_SESSION['rol']!=3 )
-{
+if($_SESSION['rol']!=1 && $_SESSION['rol']!=3 ){
   header('location: inicio.php');
 }
 include "include/head.php";
@@ -13,13 +12,12 @@ $con=("SELECT * FROM venta where id_venta=$id and id_usuario=$iduser and estado=
 $query=mysqli_query($conection,$con);
 $result=mysqli_num_rows($query);
 if($result > 0){  
-$dato=mysqli_fetch_array($query);
+    $dato=mysqli_fetch_array($query);
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <br>
    <!-- Main content -->
-
    <section class="content">
       <div class="container-fluid">
          <div class="row">
@@ -35,36 +33,34 @@ $dato=mysqli_fetch_array($query);
                             <input type="text" name="idventa"  value="<?=$id;?>" readonly hidden>
                             <div class="card-body " >
                                 <div class="form-group input-group-append">
-                                <input type="text" class="form-control" name="numserie" placeholder="Número de Serie" 
-                                value="<?=$dato[1];?>" required autocomplete="off">
-                                 <span class="text-danger">  *</span>
+                                    <input type="text" class="form-control" name="numserie" placeholder="Número de Serie" 
+                                    value="<?=$dato[1];?>" required autocomplete="off">
+                                     <span class="text-danger">  *</span>
                                 </div>
                                 
                                 <div class="form-group input-group-append">
-                                <input class="form-control"  type="text" value="<?=$dato[3];?>" name="fecha" placeholder="Tiempo de garantía" required autocomplete="off" onclick="ocultarError();" onfocus="(this.type='date')"><span class="text-danger">  *</span> 
-                              </div>
+                                    <input class="form-control"  type="text" value="<?=$dato[3];?>" name="fecha" placeholder="Tiempo de garantía" required autocomplete="off" onclick="ocultarError();" onfocus="(this.type='date')"><span class="text-danger">  *</span> 
+                                </div>
 
                                 <div class="form-group input-group-append">
                                 <input class="form-control" type="text" value="<?=$dato[4];?>" name="codpro" placeholder="Código de Producto" required autocomplete="off"><span class="text-danger">  *</span> 
                                 </div>
                             </div>
-                            <!-- /.card-body -->
-                                    
+                            <!-- /.card-body -->                                
                             <center>  
                                 <?php 
                                 if(isset($_GET['msj'])){
-                                  $mensaje=$_GET['msj'];
-                                  echo '<b class=msj>'.$mensaje.'</b>';
+                                    $mensaje=$_GET['msj'];
+                                    echo '<b class=msj>'.$mensaje.'</b>';
                                 }
                                 if(isset($_GET['msj2'])){
-                                 $mensaje=$_GET['msj2'];
-                                 echo '<b class=msj2>'.$mensaje.'</b>';
-                                    }
-                                     ?>
-                                     <br>
-                                    <button type="submit" class="btn btn-primary btn-lg">Modificar</button>
+                                    $mensaje=$_GET['msj2'];
+                                    echo '<b class=msj2>'.$mensaje.'</b>';
+                                }
+                                ?>
+                                <br>
+                                <button type="submit" class="btn btn-primary btn-lg">Modificar</button>
                             </center>
-                            
                         </form>
                     </div>
                 </div>
@@ -89,9 +85,8 @@ $dato=mysqli_fetch_array($query);
   <!-- /.content-wrapper -->
 <?php
 } 
-else{
-     
-     echo  "<meta http-equiv='Refresh' content='0;ventas_registradas.php'>";
+else{     
+    echo "<meta http-equiv='Refresh' content='0;ventas_registradas.php'>";
 }
 include "include/footer.php";
 ?>

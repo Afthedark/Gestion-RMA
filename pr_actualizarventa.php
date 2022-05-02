@@ -7,17 +7,9 @@ $fechag=$_GET['fecha'];
 $codpro=$_GET['codpro'];
 $hoy=date("Y/m/d"); 
 $id=$_SESSION['idUser'];
- 
-//echo $id.$numserie.$fechag.$codpro.$hoy;
-
 $registro=("UPDATE venta SET num_serie= '$numserie', fecha_garantia= '$fechag', codigo_producto= '$codpro' WHERE venta.id_venta=$codventa");
-	$ejec=mysqli_query($conection,$registro);
-	 
+	$ejec=mysqli_query($conection,$registro);	 
  if ($ejec) {
  	header("location:ventas_registradas.php");
  }
-
-
  ?>
-
-
