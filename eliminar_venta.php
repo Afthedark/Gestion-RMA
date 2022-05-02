@@ -17,5 +17,4 @@ if($result[0] == 1){
 else{
 	header("location: ventas_registradas.php");
 }
-/*..*/
 ?>
