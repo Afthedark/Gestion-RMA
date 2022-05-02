@@ -10,7 +10,7 @@ include "include/menu_principal.php";
 ?>
   <div class="content-wrapper">
     <section class="content" >
-      <center style="background: white;"><h1>VENTAS REGISTRADAS</h1></center>
+      <center><h1>VENTAS REGISTRADAS</h1></center>
       <table class="table table-bordered">
         <thead>
           <tr>
