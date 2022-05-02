@@ -1,10 +1,7 @@
 <?php   
 include "conexion.php";
 session_start();
-if($_SESSION['idUser']!=$_REQUEST['id'];)
-   {
-     header('location: inicio.php');
-   }
+
 
 $id_venta= $_REQUEST['id'];
 $query_delete=mysqli_query($conection,"UPDATE venta SET estado=0 where id_venta=$id_venta");
